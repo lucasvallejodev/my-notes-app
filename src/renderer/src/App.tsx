@@ -1,10 +1,14 @@
-import { Content, RootLayout, SideBar } from '@/components'
+import { Content, NotePreviewList, RootLayout, SideBar } from '@/components'
+import { ActionButtonsRow } from './components/ActionButtonsRow'
 
 function App(): JSX.Element {
   return (
     <RootLayout>
-      <SideBar className="p-2 border-4 border-blue-500 text-blue-500">Side Bar</SideBar>
-      <Content className="p-2 border-4 border-red-500 text-red-500">Content</Content>
+      <SideBar className="p-2 bg-zinc-900/95">
+        <ActionButtonsRow />
+        <NotePreviewList />
+      </SideBar>
+      <Content className="border-l bg-zinc-900 border-l-white/20">Content</Content>
     </RootLayout>
   )
 }
