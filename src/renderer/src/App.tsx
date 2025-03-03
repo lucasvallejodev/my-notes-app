@@ -1,5 +1,6 @@
 import { Content, NotePreviewList, RootLayout, SideBar } from '@/components'
 import { ActionButtonsRow } from './components/ActionButtonsRow'
+import { MarkdownEditor } from './components/MarkdownEditor'
 
 function App(): JSX.Element {
   return (
@@ -8,7 +9,9 @@ function App(): JSX.Element {
         <ActionButtonsRow />
         <NotePreviewList />
       </SideBar>
-      <Content className="border-l bg-zinc-900 border-l-white/20">Content</Content>
+      <Content className="border-l bg-zinc-900 border-l-white/20">
+        <MarkdownEditor />
+      </Content>
     </RootLayout>
   )
 }
